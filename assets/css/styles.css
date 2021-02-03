@@ -1,0 +1,123 @@
+.navbar {
+    background-color:#025e73;
+    height: 60px;
+    padding: 0 60px 0 60px;    
+}
+.navbar .active {
+     position:relative; 
+    }
+.navbar .active:after {
+      content: '';
+      position:absolute;
+      bottom: 7px;
+      left: 25%;
+      right: 25%;
+      height: 2px;
+      background:white;
+      display:block;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+}
+
+.banner {
+    height: 300px;
+    background-image: url(../images/banner.webp);
+    opacity: 0.7;
+    margin: 0 45px 0 45px;
+}
+.banner h1 {
+    font-size: 60px;
+    font-weight: bold;
+}
+.banner-highlight {
+    color: #03f3f4; 
+}
+
+.elements{
+    width: 800px;
+}
+
+.searchbar label {
+    color: #025e73;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.card-body{
+    padding: 0.5rem;
+}
+
+.bookcover { 
+    height: 90px;
+}
+.value {
+    color: #025e73;
+    font-weight: bold;
+}
+.btn {
+    background-color: #049dbf;
+    color: white
+}
+
+
+/* inicio sesion */
+
+h5{
+    color: #025e73;
+    width: max-content;
+}
+
+
+/* pagina libro */
+
+#form_paginaLibro input { 
+    text-align: right; 
+}
+
+.bitstyle {
+    color: #025e73;
+    font-weight: bold;
+}
+
+
+/* respuesta compra */
+
+.nav-item .badge {
+    position: relative;
+    top: -12px;
+    right: 3px;
+    border-radius: 50%;
+    background: rgb(104, 237, 255);
+    color: black;
+  }
+
+  #mensaje {
+      height: 500px;
+  }
+
+  #msgbtn {
+      width: max-content;
+  }
+
+
+  /* carrito de compras */
+
+  #cart-img {
+      height: 5rem;
+  }
+
+  .bitcolor {
+    color: #025e73;
+  }
+
+  table td p {
+    display: inline;
+    vertical-align: top;
+  }
+
+  .total {
+    color: #025e73;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
