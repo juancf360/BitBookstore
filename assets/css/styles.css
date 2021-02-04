@@ -27,7 +27,7 @@
     margin: 0 45px 0 45px;
 }
 .banner h1 {
-    font-size: 60px;
+    font-size: calc(1em + 4vw);
     font-weight: bold;
 }
 .banner-highlight {
@@ -50,6 +50,7 @@
 
 .bookcover { 
     height: 90px;
+    width: auto;
 }
 .value {
     color: #025e73;
