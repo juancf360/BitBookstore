@@ -28,7 +28,6 @@ const getClient = async (req, res) => {
 }
 
 const updateClient = async (req, res) => {
-
     try {
         const updatedClient = await Client.findOne({ _id: req.params.id })
         if (req.body.name) {
@@ -45,9 +44,9 @@ const updateClient = async (req, res) => {
         }
         await updatedClient.save()
         res.send(updatedClient)
-    } catch {
+    } catch (error){
         res.status(404)
-        res.send({ error: "Client doesn't exist!" })
+        res.send({ error: "Client doesn't exist!: " + error})
     }
 }
 

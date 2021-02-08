@@ -7,12 +7,10 @@ app.use(express.json())
 
 // Routes
 const clientRoutes = require('./components/client/routes')
-// const bookRoutes = require('./components/book/routes')
+const bookRoutes = require('./components/book/routes')
 
 app.use('/clients', clientRoutes)
-
-
-// app.use('/books', bookRoutes)
+app.use('/books', bookRoutes)
 
 app.listen(3000, () => {
     console.log('El servidor esta encendido')
