@@ -31,23 +31,18 @@ const updateClient = async (req, res) => {
 
     try {
         const updatedClient = await Client.findOne({ _id: req.params.id })
-
         if (req.body.name) {
             updatedClient.name = req.body.name
         }
-
         if (req.body.address) {
             updatedClient.address = req.body.address
         }
-
         if (req.body.mobile) {
             updatedClient.mobile = req.body.mobile
         }
-
         if (req.body.email) {
             updatedClient.email = req.body.email
         }
-
         await updatedClient.save()
         res.send(updatedClient)
     } catch {
@@ -56,4 +51,15 @@ const updateClient = async (req, res) => {
     }
 }
 
-module.exports = { createClient, getClient, updateClient }
+const deleteClient = async (req, res) => {
+    try {
+        await Client.deleteOne({ _id: req.params.id })
+        res.status(204).send()
+    } catch {
+        res.status(404)
+        res.send({ error: "Client doesn't exist!" })
+    }
+}
+
+
+module.exports = { createClient, getClient, updateClient, deleteClient }

@@ -1,6 +1,6 @@
 const { response } = require('express')
 const router = require('express').Router()
-const { createClient, getClient, updateClient }  = require('./actions')
+const { createClient, getClient, updateClient, deleteClient }  = require('./actions')
 // GET by ID
 
 router.get('/:id', getClient)
@@ -15,8 +15,6 @@ router.put('/:id', updateClient)
 
 // DELETE by ID
 
-router.delete('/:id', (req, res) => {
-    res.send('Client succesfully deleted')
-})
+router.delete('/:id', deleteClient)
 
 module.exports = router
