@@ -1,12 +1,7 @@
 const Client = require('./model')
 
 const createClient = async (req, res) => {
-    const newClient = new Client({
-        name: req.body.name,
-        address: req.body.address,
-        mobile: req.body.mobile,
-        email: req.body.mobile
-    })
+    const newClient = new Client(req.body)
     await newClient.save((error, clientSaved) => {
         if (error) {
             console.error('Error saving client', error)
